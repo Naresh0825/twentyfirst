@@ -21,7 +21,7 @@ class AppWidget extends StatelessWidget {
           duration: 2800,
           imageSize: 100,
           // imageSrc: 'assets/images/logo.jpeg',
-          text: 'Powered by Webbook',
+          text: 'Powered by Naresh',
           textType: TextType.ColorizeAnimationText,
           colors: [
             ColorManager.darkPurple,
