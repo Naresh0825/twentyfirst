@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+import 'package:twentyfirst/pages/activity/activity_page.dart';
 import 'package:twentyfirst/pages/login_page.dart';
+import 'package:twentyfirst/pages/profile/profile_page.dart';
+import 'package:twentyfirst/pages/homepage/home_content.dart';
 
 import '../../commons/exporter.dart';
 
@@ -20,11 +23,9 @@ class _HomePageNavigationPageState extends State<HomePageNavigationPage> {
 
   List<Widget> pages() {
     return const [
-      LoginPage(),
-      LoginPage(),
-      LoginPage(),
-      LoginPage(),
-      LoginPage(),
+      HomeContent(),
+      ActivityPage(),
+      ProfilePage(),
     ];
   }
 
@@ -38,27 +39,27 @@ class _HomePageNavigationPageState extends State<HomePageNavigationPage> {
         activeColorPrimary: ColorManager.primary,
         inactiveColorPrimary: ColorManager.grey3,
       ),
+      // PersistentBottomNavBarItem(
+      //   icon: const Icon(CupertinoIcons.bubble_left_fill),
+      //   inactiveIcon: const Icon(CupertinoIcons.bubble_left),
+      //   title: ("Message"),
+      //   activeColorPrimary: ColorManager.primary,
+      //   inactiveColorPrimary: ColorManager.grey3,
+      // ),
       PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.bubble_left_fill),
-        inactiveIcon: const Icon(CupertinoIcons.bubble_left),
-        title: ("Message"),
+        icon: const Icon(Icons.local_activity),
+        inactiveIcon: const Icon(Icons.local_activity),
+        title: ("Activity"),
         activeColorPrimary: ColorManager.primary,
         inactiveColorPrimary: ColorManager.grey3,
       ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(Icons.local_dining_outlined),
-        inactiveIcon: const Icon(restaurant),
-        title: ("Order"),
-        activeColorPrimary: ColorManager.primary,
-        inactiveColorPrimary: ColorManager.grey3,
-      ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.creditcard_fill),
-        inactiveIcon: const Icon(CupertinoIcons.creditcard),
-        title: ("Bill"),
-        activeColorPrimary: ColorManager.primary,
-        inactiveColorPrimary: ColorManager.grey3,
-      ),
+      // PersistentBottomNavBarItem(
+      //   icon: const Icon(CupertinoIcons.creditcard_fill),
+      //   inactiveIcon: const Icon(CupertinoIcons.creditcard),
+      //   title: ("Bill"),
+      //   activeColorPrimary: ColorManager.primary,
+      //   inactiveColorPrimary: ColorManager.grey3,
+      // ),
       PersistentBottomNavBarItem(
         icon: const Icon(CupertinoIcons.person_fill),
         inactiveIcon: const Icon(CupertinoIcons.person),

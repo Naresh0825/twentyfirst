@@ -59,6 +59,10 @@ class ColorManager {
   static Color cadiumBlue = HexColor.fromHex("#085593");
 }
 
+class ImagePath {
+  static String path = 'assets/images';
+}
+
 extension HexColor on Color {
   static Color fromHex(String hexColorString) {
     hexColorString = hexColorString.replaceAll('#', '');
